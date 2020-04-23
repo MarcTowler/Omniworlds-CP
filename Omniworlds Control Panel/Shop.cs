@@ -22,11 +22,11 @@ namespace Omniworlds_Control_Panel
             listShops();
         }
 
-        private void lstItems_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstShops_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstItems.SelectedItems.Count > 0)
+            if (lstShops.SelectedItems.Count > 0)
             {
-                String[] name = lstItems.Text.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
+                String[] name = lstShops.Text.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
                 txtName.Text = name[1];
                 Console.WriteLine(name[0].Trim(':'));
                 populateShop(name[0].Trim(':'));
@@ -66,12 +66,13 @@ namespace Omniworlds_Control_Panel
             // List the properties of the searchResults IList
             foreach (API item in searchResults)
             {
-                if(Convert.ToInt32(item.sid) < 10)
+                if (Convert.ToInt32(item.sid) < 10)
                 {
-                    lstItems.Items.Add("00" + item.sid + ": " + item.shop_name);
-                } else
+                    lstShops.Items.Add("00" + item.sid + ": " + item.shop_name);
+                }
+                else
                 {
-                    lstItems.Items.Add("0" + item.sid + ": " + item.shop_name);
+                    lstShops.Items.Add("0" + item.sid + ": " + item.shop_name);
                 }
 
             }
@@ -103,7 +104,7 @@ namespace Omniworlds_Control_Panel
             // List the properties of the searchResults IList
             foreach (API item in searchResults)
             {
-                
+
                 if (item.sid == id)
                 {
                     Console.WriteLine(item.sid.ToString());
@@ -124,13 +125,14 @@ namespace Omniworlds_Control_Panel
                     cmbNPC.Items.Add(item.shopkeep);
                     cmbNPC.Text = item.shopkeep;
                     Console.WriteLine(item.open);
-                    
 
-                } else
+
+                }
+                else
                 {
                     cmbNPC.Items.Add(item.shopkeep);
                 }
-                
+
             }
         }
     }
