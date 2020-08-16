@@ -19,9 +19,9 @@ namespace Omniworlds_Control_Panel
 
         private void btnItem_Click(object sender, EventArgs e)
         {
-            var itemManager = new Items();
+            //var itemManager = new Items();
 
-            itemManager.Show();
+            //itemManager.Show();
             this.Hide();
         }
 
@@ -30,6 +30,30 @@ namespace Omniworlds_Control_Panel
             var shopManager = new Shop();
 
             shopManager.Show();
+            this.Hide();
+        }
+
+        private void btnResource_Click(object sender, EventArgs e)
+        {
+            var resourceManager = new Resource();
+
+            resourceManager.Show();
+            this.Hide();
+        }
+
+        private void btnWeapons_Click(object sender, EventArgs e)
+        {
+            var weaponManager = new Weapon();
+
+            weaponManager.Show();
+            this.Hide();
+        }
+
+        private void btnNPC_Click(object sender, EventArgs e)
+        {
+            var monsterManager = new Monster();
+
+            monsterManager.Show();
             this.Hide();
         }
     }
