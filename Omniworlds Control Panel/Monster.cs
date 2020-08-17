@@ -25,9 +25,17 @@ namespace Omniworlds_Control_Panel
             this.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
+        private void txtAttackMsg_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            lblAttackOutput.Text = txtName.Text + " " + tb.Text + " PLAYER";
+        }
+
+        private void txtDefenseMsg_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            lblAttackOutput.Text = txtName.Text + " " + tb.Text + " PLAYER";
         }
     }
 }

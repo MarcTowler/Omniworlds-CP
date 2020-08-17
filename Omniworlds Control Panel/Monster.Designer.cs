@@ -86,6 +86,10 @@
             this.lblAttackOutput = new System.Windows.Forms.Label();
             this.lblDefenseOutput = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.numDrop = new System.Windows.Forms.NumericUpDown();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numRareDrop = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCoins)).BeginInit();
@@ -98,6 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDrop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRareDrop)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -209,7 +215,6 @@
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 46;
             this.label2.Text = "Litcoins";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // numCoins
             // 
@@ -645,7 +650,7 @@
             this.chkLstLocation.Items.AddRange(new object[] {
             "Vas Aven Sewers",
             "Vas Aven Fields"});
-            this.chkLstLocation.Location = new System.Drawing.Point(461, 220);
+            this.chkLstLocation.Location = new System.Drawing.Point(461, 217);
             this.chkLstLocation.Name = "chkLstLocation";
             this.chkLstLocation.Size = new System.Drawing.Size(164, 184);
             this.chkLstLocation.TabIndex = 84;
@@ -682,6 +687,7 @@
             this.txtAttackMsg.Name = "txtAttackMsg";
             this.txtAttackMsg.Size = new System.Drawing.Size(309, 20);
             this.txtAttackMsg.TabIndex = 88;
+            this.txtAttackMsg.TextChanged += new System.EventHandler(this.txtAttackMsg_TextChanged);
             // 
             // label20
             // 
@@ -698,6 +704,7 @@
             this.txtDefenseMsg.Name = "txtDefenseMsg";
             this.txtDefenseMsg.Size = new System.Drawing.Size(309, 20);
             this.txtDefenseMsg.TabIndex = 90;
+            this.txtDefenseMsg.TextChanged += new System.EventHandler(this.txtDefenseMsg_TextChanged);
             // 
             // lblAttackOutput
             // 
@@ -726,12 +733,48 @@
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(149, 240);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(149, 13);
+            this.label21.TabIndex = 94;
+            this.label21.Text = "Normal Drop Rate Modifier (%)";
+            // 
+            // numDrop
+            // 
+            this.numDrop.Location = new System.Drawing.Point(152, 256);
+            this.numDrop.Name = "numDrop";
+            this.numDrop.Size = new System.Drawing.Size(109, 20);
+            this.numDrop.TabIndex = 95;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(149, 279);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(139, 13);
+            this.label22.TabIndex = 96;
+            this.label22.Text = "Rare Drop Rate Modifier (%)";
+            // 
+            // numRareDrop
+            // 
+            this.numRareDrop.Location = new System.Drawing.Point(152, 295);
+            this.numRareDrop.Name = "numRareDrop";
+            this.numRareDrop.Size = new System.Drawing.Size(109, 20);
+            this.numRareDrop.TabIndex = 97;
+            // 
             // Monster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.numRareDrop);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.numDrop);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblDefenseOutput);
             this.Controls.Add(this.lblAttackOutput);
@@ -804,6 +847,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDrop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRareDrop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -869,5 +914,9 @@
         private System.Windows.Forms.Label lblAttackOutput;
         private System.Windows.Forms.Label lblDefenseOutput;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.NumericUpDown numDrop;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.NumericUpDown numRareDrop;
     }
 }

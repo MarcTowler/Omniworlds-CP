@@ -37,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNew
@@ -78,7 +80,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(175, 69);
+            this.txtName.Location = new System.Drawing.Point(175, 155);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 20);
             this.txtName.TabIndex = 14;
@@ -86,7 +88,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(173, 50);
+            this.lblName.Location = new System.Drawing.Point(173, 136);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(84, 13);
             this.lblName.TabIndex = 15;
@@ -95,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(173, 115);
+            this.label1.Location = new System.Drawing.Point(173, 201);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 16;
@@ -114,30 +116,38 @@
             "Key Items",
             "Animal",
             "Unidentified"});
-            this.cmbType.Location = new System.Drawing.Point(175, 136);
+            this.cmbType.Location = new System.Drawing.Point(175, 222);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(175, 21);
             this.cmbType.TabIndex = 17;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(175, 190);
+            this.btnSave.Location = new System.Drawing.Point(175, 276);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 26);
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnDelete
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(367, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(342, 44);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Resource Manager";
+            this.btnDelete.Location = new System.Drawing.Point(13, 470);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(117, 29);
+            this.btnDelete.TabIndex = 20;
+            this.btnDelete.Text = "Delete Resource";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Omniworlds_Control_Panel.Properties.Resources.OmniWorldsLogo_Normal;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1064, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
             // 
             // Resource
             // 
@@ -145,7 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.label1);
@@ -155,8 +165,10 @@
             this.Controls.Add(this.lstResource);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Resource";
             this.Text = "Resource Manager";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +185,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
