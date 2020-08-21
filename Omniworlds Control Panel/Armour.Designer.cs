@@ -73,7 +73,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lstWeapon = new System.Windows.Forms.ListBox();
+            this.lstArmour = new System.Windows.Forms.ListBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -496,13 +496,13 @@
             this.btnBack.Text = "Back to Menu";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // lstWeapon
+            // lstArmour
             // 
-            this.lstWeapon.FormattingEnabled = true;
-            this.lstWeapon.Location = new System.Drawing.Point(12, 150);
-            this.lstWeapon.Name = "lstWeapon";
-            this.lstWeapon.Size = new System.Drawing.Size(116, 407);
-            this.lstWeapon.TabIndex = 97;
+            this.lstArmour.FormattingEnabled = true;
+            this.lstArmour.Location = new System.Drawing.Point(12, 150);
+            this.lstArmour.Name = "lstArmour";
+            this.lstArmour.Size = new System.Drawing.Size(116, 407);
+            this.lstArmour.TabIndex = 97;
             // 
             // btnEdit
             // 
@@ -583,7 +583,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lstWeapon);
+            this.Controls.Add(this.lstArmour);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.pictureBox1);
@@ -654,7 +654,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.ListBox lstWeapon;
+        private System.Windows.Forms.ListBox lstArmour;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.PictureBox pictureBox1;

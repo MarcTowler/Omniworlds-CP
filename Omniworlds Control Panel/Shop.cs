@@ -24,6 +24,7 @@ namespace Omniworlds_Control_Panel
 
         private void lstShops_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Console.WriteLine("yay");
             if (lstShops.SelectedItems.Count > 0)
             {
                 String[] name = lstShops.Text.Split(new string[] { ": " }, 2, StringSplitOptions.RemoveEmptyEntries);
@@ -48,7 +49,7 @@ namespace Omniworlds_Control_Panel
             HttpResponseMessage output = await client.GetAsync("Shop/listShops");
 
             string response = await output.Content.ReadAsStringAsync();
-            txtNotes.Text = response;
+            //txtNotes.Text = response;
 
             JObject parseOutput = JObject.Parse(response);
 
@@ -86,7 +87,7 @@ namespace Omniworlds_Control_Panel
             HttpResponseMessage output = await client.GetAsync("Shop/listShops");
 
             string response = await output.Content.ReadAsStringAsync();
-            txtNotes.Text = response;
+            //txtNotes.Text = response;
 
             JObject parseOutput = JObject.Parse(response);
 
@@ -118,19 +119,21 @@ namespace Omniworlds_Control_Panel
                         Console.WriteLine("nay");
                     }
                     Console.WriteLine(Convert.ToDecimal(item.balance));
-                    txtBalance.Value = Convert.ToDecimal(item.balance);
-                    txtLevel.Value = Convert.ToDecimal(item.min_level);
-                    cmbLocation.Items.Add("Vas Aven");
-                    cmbLocation.Text = "Vas Aven";
-                    cmbNPC.Items.Add(item.shopkeep);
-                    cmbNPC.Text = item.shopkeep;
+                    numBalance.Value = Convert.ToDecimal(item.balance);
+                    numLevel.Value = Convert.ToDecimal(item.min_level);
+
+                    //Need to make sure the list of locations is already added and check Vas Aven
+                    chkLstLocation.Items.Add("Vas Aven");
+                    chkLstLocation.Text = "Vas Aven";
+                    cmbShopkeep.Items.Add(item.shopkeep);
+                    cmbShopkeep.Text = item.shopkeep;
                     Console.WriteLine(item.open);
 
 
                 }
                 else
                 {
-                    cmbNPC.Items.Add(item.shopkeep);
+                    cmbShopkeep.Items.Add(item.shopkeep);
                 }
 
             }
