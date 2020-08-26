@@ -92,6 +92,7 @@
             this.btnEvent.TabIndex = 5;
             this.btnEvent.Text = "Event Manager";
             this.btnEvent.UseVisualStyleBackColor = true;
+            this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
             // 
             // btnLocation
             // 
@@ -130,6 +131,7 @@
             this.btnArmour.TabIndex = 9;
             this.btnArmour.Text = "Armour Manager";
             this.btnArmour.UseVisualStyleBackColor = true;
+            this.btnArmour.Click += new System.EventHandler(this.btnArmour_Click);
             // 
             // btnClass
             // 

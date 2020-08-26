@@ -141,10 +141,6 @@
             // chkLstResource
             // 
             this.chkLstResource.FormattingEnabled = true;
-            this.chkLstResource.Items.AddRange(new object[] {
-            "Iron Ore",
-            "Wool",
-            "Bones"});
             this.chkLstResource.Location = new System.Drawing.Point(729, 450);
             this.chkLstResource.Name = "chkLstResource";
             this.chkLstResource.Size = new System.Drawing.Size(176, 184);
@@ -162,9 +158,6 @@
             // chkLstArmour
             // 
             this.chkLstArmour.FormattingEnabled = true;
-            this.chkLstArmour.Items.AddRange(new object[] {
-            "Torn Trousers",
-            "Flat Cap"});
             this.chkLstArmour.Location = new System.Drawing.Point(537, 450);
             this.chkLstArmour.Name = "chkLstArmour";
             this.chkLstArmour.Size = new System.Drawing.Size(176, 184);
@@ -182,9 +175,6 @@
             // chkLstWeapon
             // 
             this.chkLstWeapon.FormattingEnabled = true;
-            this.chkLstWeapon.Items.AddRange(new object[] {
-            "Boxing Gloves",
-            "Wooden Sword"});
             this.chkLstWeapon.Location = new System.Drawing.Point(344, 450);
             this.chkLstWeapon.Name = "chkLstWeapon";
             this.chkLstWeapon.Size = new System.Drawing.Size(176, 184);
@@ -202,9 +192,6 @@
             // chkLstItem
             // 
             this.chkLstItem.FormattingEnabled = true;
-            this.chkLstItem.Items.AddRange(new object[] {
-            "Tiny Potion",
-            "Strength Potion"});
             this.chkLstItem.Location = new System.Drawing.Point(152, 450);
             this.chkLstItem.Name = "chkLstItem";
             this.chkLstItem.Size = new System.Drawing.Size(176, 184);
@@ -346,7 +333,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(152, 96);
+            this.txtName.Location = new System.Drawing.Point(153, 97);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 20);
             this.txtName.TabIndex = 104;

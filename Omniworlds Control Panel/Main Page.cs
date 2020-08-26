@@ -56,5 +56,21 @@ namespace Omniworlds_Control_Panel
             monsterManager.Show();
             this.Hide();
         }
+
+        private void btnEvent_Click(object sender, EventArgs e)
+        {
+            var eventManager = new Event();
+
+            eventManager.Show();
+            this.Hide();
+        }
+
+        private void btnArmour_Click(object sender, EventArgs e)
+        {
+            var armourManager = new Armour();
+
+            armourManager.Show();
+            this.Hide();
+        }
     }
 }
