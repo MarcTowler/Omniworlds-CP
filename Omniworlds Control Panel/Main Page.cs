@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ServiceProcess;
 
 namespace Omniworlds_Control_Panel
 {
@@ -15,6 +9,32 @@ namespace Omniworlds_Control_Panel
         public MainMenu()
         {
             InitializeComponent();
+
+            ServiceController sc = new ServiceController("ElrakisBot");
+
+            switch (sc.Status)
+            {
+                case ServiceControllerStatus.Running:
+                    label2.Text = "Elrakis is Running";
+
+                    break;
+                case ServiceControllerStatus.Stopped:
+                    label2.Text = "Elrakis is Stopped";
+
+                    break;
+                case ServiceControllerStatus.Paused:
+                    label2.Text = "Elrakis is Paused";
+
+                    break;
+                case ServiceControllerStatus.StopPending:
+                    label2.Text = "Elrakis is Stopping";
+
+                    break;
+                case ServiceControllerStatus.StartPending:
+                    label2.Text = "Elrakis is Starting";
+
+                    break;
+            }
         }
 
         private void btnItem_Click(object sender, EventArgs e)
